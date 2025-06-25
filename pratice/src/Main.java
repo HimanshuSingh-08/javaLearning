@@ -7,9 +7,13 @@ public class Main {
 //        System.out.println(car.getMake());
 //        car.describeCar();
 
-    Customer customerOne = new Customer("Himanshu Singh", "himansh.singh293@gmail.com" , 23);
-    System.out.println(customerOne.getName());
-    System.out.println(customerOne.getEmailAddress());
-    System.out.println(customerOne.getCreditLimit());
+//    Customer customerOne = new Customer("Himanshu Singh", "himansh.singh293@gmail.com" , 23);
+//    System.out.println(customerOne.getName());
+//    System.out.println(customerOne.getEmailAddress());
+//    System.out.println(customerOne.getCreditLimit());
+
+        // Concept of the inheretience
+        Animal animal = new Animal("Generic animal" , "Big enough" , 235);
+        System.out.println(animal);
     }
 }

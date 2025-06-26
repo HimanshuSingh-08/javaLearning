@@ -14,6 +14,15 @@ public class Main {
 
         // Concept of the inheretience
         Animal animal = new Animal("Generic animal" , "Big enough" , 235);
+//        doAnimalStuff(animal , "this animal is slow");
+            Dog dog = new Dog();
+            doAnimalStuff(dog , " THis is fast animal");
+    }
+
+    public static void doAnimalStuff(Animal animal, String speed){
+        animal.makeNoise();
+        animal.move(speed);
         System.out.println(animal);
+        System.out.println("-----");
     }
 }

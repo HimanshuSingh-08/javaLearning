@@ -16,7 +16,15 @@ public class Main {
         Animal animal = new Animal("Generic animal" , "Big enough" , 235);
 //        doAnimalStuff(animal , "this animal is slow");
             Dog dog = new Dog();
-            doAnimalStuff(dog , " THis is fast animal");
+            doAnimalStuff(dog, "fast");
+
+            Dog yorkie = new Dog("yorkie" , 15);
+            doAnimalStuff(yorkie , " fast");
+
+
+            Dog retriver = new Dog("Labrodar Retriever" ,45,"small", "Floppy" ,"Swimmer");
+            doAnimalStuff(retriver , " slow");
+
     }
 
     public static void doAnimalStuff(Animal animal, String speed){

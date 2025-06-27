@@ -39,8 +39,36 @@ public class Dog extends Animal {
 
     // creating method make noise for dog class itself
 
+    public void makeNoise(){
+        bark();
+        System.out.println();
+    }
+
     public void move(String speed) {
             super.move(speed);
+            if(speed == "slow"){
+                walk();
+                wagTail();
+            }else{
+                run();
+                bark();
+            }
+    }
+
+    private void bark(){
+        System.out.println("woof! ");
+    }
+
+    private void wagTail(){
+        System.out.println("Dogesh wavying the tail ! ");
+    }
+
+    private void walk(){
+        System.out.println("Dogesh gone on walk!");
+    }
+
+    private void run(){
+        System.out.println("Dogesh bhai speed me bhago! ");
     }
 
 }

@@ -25,6 +25,10 @@ public class Main {
             Dog retriver = new Dog("Labrodar Retriever" ,45,"small", "Floppy" ,"Swimmer");
             doAnimalStuff(retriver , " slow");
 
+            Fish goldie = new Fish("Goldfish" , 0.345, 2,3);
+            doAnimalStuff(goldie , "fast");
+
+
     }
 
     public static void doAnimalStuff(Animal animal, String speed){

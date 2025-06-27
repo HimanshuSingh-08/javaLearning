@@ -6,8 +6,10 @@ public class Main {
 
         PersonalComputer personalComputer = new PersonalComputer("2208", "HP Omen",theMonitor,theMotherboard,theCase);
 
-        personalComputer.getMonitor().drawPixelAt(10,10,"blue");
-        personalComputer.getMotherboard().loadProgram("Windows OS is booting Up");
-        personalComputer.getComputerCase().pressPowerButton();
+//        personalComputer.getMonitor().drawPixelAt(10,10,"blue");
+//        personalComputer.getMotherboard().loadProgram("Windows OS is booting Up");
+//        personalComputer.getComputerCase().pressPowerButton();
+
+        personalComputer.powerUP();
     }
 }

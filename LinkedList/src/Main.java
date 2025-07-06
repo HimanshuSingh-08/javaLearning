@@ -8,6 +8,7 @@ public class Main {
         addElements(varList);
         // We are going to have
         System.out.println(varList);
+        printElements(varList);
 
     }
     private static void addElements(LinkedList<String> varList){
@@ -25,5 +26,19 @@ public class Main {
         varList.offer("quque");
         varList.offerFirst("This is queue first");
         varList.offerLast("This quque last");
+    }
+
+    // as we have different methods to add similarly we have several  methods to removed the elements from linkedlist
+    public static void removeElements(LinkedList<String>varList){
+        varList.remove(3);
+        varList.remove("quque");
+    }
+
+    //ways to print the list using iterative methods for it
+    public  static void printElements(LinkedList<String> varList){
+        var iterator  = varList.iterator();
+        while(iterator.hasNext()){
+            System.out.println("Items :->" + iterator.next());
+        }
     }
 }

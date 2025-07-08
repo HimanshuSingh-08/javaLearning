@@ -1,4 +1,6 @@
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 // Easy way to use my custom data type as it comes with its own constructor,
@@ -24,6 +26,9 @@ public class Main {
     public static void main(String[] args) {
         LinkedList<Place> placesToVisit = new LinkedList<>();
 
+//        Iterator<Place> iterator = placesToVisit.iterator();
+        ListIterator<Place> iterator = placesToVisit.listIterator();
+
         Place bsl = new Place("Bhusawal" , 2344);
         placesToVisit.add(bsl);
         addplaceToVisit(placesToVisit,new Place("Bhopal" , 2345));
@@ -31,32 +36,64 @@ public class Main {
         addplaceToVisit(placesToVisit ,new Place("Gwalior" , 8933));
         addplaceToVisit(placesToVisit, new Place("Dehradun" , 323));
 
-        var iterator = placesToVisit.iterator();
         Scanner scanner = new Scanner(System.in);
-        boolean quitloop = false;
+        boolean quitLoop = false;
         boolean forward  = true;
 
         display();
 
-        while(!quitloop){
-            System.out.println("Enter the value: ");
-            String menuItem = scanner.nextLine().toUpperCase().substring(0,1);
+        while (!quitLoop) {
+            if (!iterator.hasPrevious()) {
+                System.out.println("Originating : " + iterator.next());
+                forward = true;
+            }
+            if (!iterator.hasNext()) {
+                System.out.println("Final : " + iterator.previous());
+                forward = false;
+            }
+            System.out.print("Enter Value: ");
+            String menuItem = scanner.nextLine().toUpperCase().substring(0, 1);
 
-            switch (menuItem){
+            switch (menuItem) {
                 case "F":
-                    System.out.println("User wants to move forward");
+                    System.out.println("User wants to go forward");
+                    if (!forward) {           // Reversing Direction
+                        forward = true;
+                        if (iterator.hasNext()) {
+                            iterator.next();  // Adjust position forward
+                        }
+                    }
+
+                    if (iterator.hasNext()) {
+                        System.out.println(iterator.next());
+                    }
+
                     break;
+
                 case "B":
                     System.out.println("User wants to go backwards");
+                    if (forward) {           // Reversing Direction
+                        forward = false;
+                        if (iterator.hasPrevious()) {
+                            iterator.previous();  // Adjust position backwards
+                        }
+                    }
+
+                    if (iterator.hasPrevious()) {
+                        System.out.println(iterator.previous());
+                    }
                     break;
-                case "L":
-                    System.out.println(placesToVisit);
-                    break;
+
                 case "M":
                     display();
                     break;
+
+                case "L":
+                    System.out.println(placesToVisit);
+                    break;
+
                 default:
-                    quitloop = true;
+                    quitLoop = true;
                     break;
             }
         }

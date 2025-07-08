@@ -27,7 +27,6 @@ public class Main {
         LinkedList<Place> placesToVisit = new LinkedList<>();
 
 //        Iterator<Place> iterator = placesToVisit.iterator();
-        ListIterator<Place> iterator = placesToVisit.listIterator();
 
         Place bsl = new Place("Bhusawal" , 2344);
         placesToVisit.add(bsl);
@@ -39,6 +38,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean quitLoop = false;
         boolean forward  = true;
+        ListIterator<Place> iterator = placesToVisit.listIterator();
 
         display();
 

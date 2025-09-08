@@ -40,7 +40,16 @@ public class Main {
         //---> But specific data type me chaiye to bhai mujhe typecast karna padega.
         String str = (String) tempBox2.getItem();
         int temp = (int) tempBox.getItem();
-        
+
+
+        GBox<Integer> testItem = new GBox();
+        testItem.setItem(23);
+
+        GBox<String> testItem2 = new GBox();
+        testItem2.setItem("TheBox");
+
+        String testStr = testItem2.getItem();
+        System.out.println(testStr);
     }
 
     public static void doAnimalStuff(Animal animal, String speed){

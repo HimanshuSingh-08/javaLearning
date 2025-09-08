@@ -34,8 +34,13 @@ public class Main {
         Box tempBox2 = new Box();
         tempBox2.setItem("Himanshu");
 
-        Object str =  tempBox2.getItem();
-        Object temp = tempBox.getItem();
+//        Object str =  tempBox2.getItem();
+//        Object temp = tempBox.getItem();
+
+        //---> But specific data type me chaiye to bhai mujhe typecast karna padega.
+        String str = (String) tempBox2.getItem();
+        int temp = (int) tempBox.getItem();
+        
     }
 
     public static void doAnimalStuff(Animal animal, String speed){

@@ -7,10 +7,10 @@ public class Main {
 //        System.out.println(car.getMake());
 //        car.describeCar();
 
-//    Customer customerOne = new Customer("Himanshu Singh", "himansh.singh293@gmail.com" , 23);
-//    System.out.println(customerOne.getName());
-//    System.out.println(customerOne.getEmailAddress());
-//    System.out.println(customerOne.getCreditLimit());
+    Customer customerOne = new Customer("Himanshu Singh", "himansh.singh293@gmail.com" , 23);
+    System.out.println(customerOne.getName());
+    System.out.println(customerOne.getEmailAddress());
+    System.out.println(customerOne.getCreditLimit());
 
         // Concept of the inheretience
 //        Animal animal = new Animal("Generic animal" , "Big enough" , 235);
@@ -29,17 +29,17 @@ public class Main {
 //            doAnimalStuff(goldie , "fast");
 
     //--------------Concept of Java---------------//
-        Box tempBox = new Box(2);
-        tempBox.setItem(2);
-        Box tempBox2 = new Box();
-        tempBox2.setItem("Himanshu");
+//        Box tempBox = new Box(2);
+//        tempBox.setItem(2);
+//        Box tempBox2 = new Box();
+//        tempBox2.setItem("Himanshu");
 
 //        Object str =  tempBox2.getItem();
 //        Object temp = tempBox.getItem();
 
         //---> But specific data type me chaiye to bhai mujhe typecast karna padega.
-        String str = (String) tempBox2.getItem();
-        int temp = (int) tempBox.getItem();
+//        String str = (String) tempBox2.getItem();
+//        int temp = (int) tempBox.getItem();
 
 
         GBox<Integer> testItem = new GBox();
@@ -59,3 +59,4 @@ public class Main {
         System.out.println("-----");
     }
 }
+

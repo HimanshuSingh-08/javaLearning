@@ -14,7 +14,7 @@ public class BubbleSort {
     public static void sort(int[] arr ){
         int len = arr.length;
         for(int i=0; i<len; i++){
-            for(int j=1; j<len; j++){
+            for(int j=1; j<len-i; j++){
                 if(arr[j-1] > arr[j]){
                     int temp = arr[j-1];
                     arr[j-1] = arr[j];
@@ -23,5 +23,6 @@ public class BubbleSort {
             }
         }
     }
-
+    // There is further improvement : In the inner loop we dont need to iterate till last of the array
+    // as the last elements are put in a sorted manner so no need to put search and swap till there.
 }

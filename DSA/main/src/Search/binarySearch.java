@@ -4,7 +4,6 @@ package Search;
 public class binarySearch {
     public static void main(String[] args) {
         int [] arr = {0,3,5,7,8,9,15,17,19};
-
         System.out.println(searchIndex(23,arr));
     }
 

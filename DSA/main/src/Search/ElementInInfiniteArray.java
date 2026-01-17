@@ -15,6 +15,8 @@ public class ElementInInfiniteArray {
         int end = 1;
 
         // Expand the range safely
+        //Note : now thing is we are in a infinite array we cant know the last index but to keep the code
+        // bug free we have to consider the range eles we are going to have indexout of bound error.
         while (end < arr.length && target > arr[end]) {
             int newStart = end + 1;
             end = end + (end - start + 1) * 2;

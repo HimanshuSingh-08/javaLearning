@@ -2,7 +2,7 @@ package Maths;
 
 public class primeNumber {
     public static void main(String[] args) {
-            int n = 1222234345;
+            int n = 765596972;
             if(checkPrime(n)){
                 System.out.println("The number is prime !!");
             }else{
@@ -10,16 +10,21 @@ public class primeNumber {
             }
     }
 
-    public static boolean checkPrime(int n){
-        // koi bhi number prime tab hoga jab wo sirf khud se ya 1 se divisble ho so
+    public static boolean checkPrime(int n) {
 
-        for(int i = 2; i<n ; i++){
-            if(n % i == 0){
+        if (n <= 1) return false;
+        if (n <= 3) return true;
+
+        if (n % 2 == 0 || n % 3 == 0) return false;
+
+        for (int i = 5; i * i <= n; i += 6) {
+            if (n % i == 0 || n % (i + 2) == 0) {
                 return false;
             }
         }
         return true;
     }
+
 }
 
 // Ye jo approach hai ye hai to sahi but thing is ki ye optimised nahi hai.

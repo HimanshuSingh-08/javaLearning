@@ -3,7 +3,8 @@ package Recursion;
 public class basicIterations {
     public static void main(String[] args) {
         int n = 12;
-        printNto1(n);
+//        printNto1(n);
+         System.out.println(printFact(n));
     }
     //functions to print n to 1
     public static void printNumbersNto1(int n){
@@ -29,5 +30,11 @@ public class basicIterations {
         if(n == 0) return;
         printNto1(n-1);
         System.out.println(n);
+    }
+
+    //factorial of number
+    public static int printFact(int n){
+        if(n == 1 || n ==0) return 1;
+        return n*printFact(n-1);
     }
 }

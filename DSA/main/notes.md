@@ -314,3 +314,5 @@ Note :- Yaha pe ek cheez hai if you notice you will find that ki we are doing so
     - Arguments : Which get passed in every future function call.
     - Return Type :
     - Body function :
+
+Modulo Properties and Concept : 

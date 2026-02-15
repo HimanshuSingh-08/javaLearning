@@ -3,7 +3,7 @@ package Recursion;
 public class basicIterations {
     public static void main(String[] args) {
         int n = 12;
-        printNumbers1toN(0,n);
+        printNto1(n);
     }
     //functions to print n to 1
     public static void printNumbersNto1(int n){
@@ -22,5 +22,12 @@ public class basicIterations {
         }
         System.out.println(start);
         printNumbers1toN(start +1 , n);
+    }
+
+    // function to print n to 1 with one paramter
+    public static void printNto1(int n){
+        if(n == 0) return;
+        printNto1(n-1);
+        System.out.println(n);
     }
 }

@@ -2,9 +2,9 @@ package Recursion;
 
 public class basicIterations {
     public static void main(String[] args) {
-        int n = 12;
+        int n = 123343;
 //        printNto1(n);
-         System.out.println(printFact(n));
+         System.out.println(prodOfDigits(n));
     }
     //functions to print n to 1
     public static void printNumbersNto1(int n){
@@ -36,5 +36,19 @@ public class basicIterations {
     public static int printFact(int n){
         if(n == 1 || n ==0) return 1;
         return n*printFact(n-1);
+    }
+
+    public static  int sumOfDigits(int n){
+        if(n==0){
+            return 0;
+        }
+        return (n%10) + sumOfDigits(n/10);
+    }
+
+    public static  int prodOfDigits(int n){
+        if(n%10==n){
+            return n;
+        }
+        return (n%10) * prodOfDigits(n/10);
     }
 }

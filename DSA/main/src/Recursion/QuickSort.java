@@ -52,3 +52,4 @@ public class QuickSort {
         quickSort(arr ,s , high);
     }
 }
+// Better for arrays : Reason we are not creating new array each time. Th

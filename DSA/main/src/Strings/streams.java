@@ -4,7 +4,7 @@ public class streams {
     public static void main(String[] args) {
         String str = "Himanshu";
 //        skipChar(str,"");
-        System.out.println(skipSubString(str));
+        System.out.println(skipSubStringButSelectedOne(str));
     }
 
     //helper function to process the strings
@@ -54,6 +54,19 @@ public class streams {
             return skipSubString(str.substring(3));
         }else{
             return str.charAt(0) + skipSubString(str.substring(1));
+        }
+    }
+    // what if you wanted to skip a specific part from the string not so for this we just need minor changes in our
+    // code and all done.
+
+    public static String skipSubStringButSelectedOne(String str){
+        // when whole str got processed
+        if(str.isEmpty()) return "";
+
+        if(str.startsWith("man") &&  !str.startsWith("manhu")){
+            return skipSubStringButSelectedOne(str.substring(3));
+        }else{
+            return str.charAt(0) + skipSubStringButSelectedOne(str.substring(1));
         }
     }
 }

@@ -4,7 +4,7 @@ public class streams {
     public static void main(String[] args) {
         String str = "Himanshu";
 //        skipChar(str,"");
-        System.out.println(skipCharOneArg(str));
+        System.out.println(skipSubString(str));
     }
 
     //helper function to process the strings
@@ -40,6 +40,20 @@ public class streams {
             return skipCharOneArg(str.substring(1));
         }else{
             return ch + skipCharOneArg(str.substring(1));
+        }
+    }
+
+    // now this is the basic of strings now thing like if we have a question where we need to skip certain name.
+    // In that ham kya kare hai jab ham koi nai string add karte hai to ham bas us ko skip kardenge
+
+    public static String skipSubString(String str){
+        // when whole str got processed
+        if(str.isEmpty()) return "";
+
+        if(str.startsWith("shu")){
+            return skipSubString(str.substring(3));
+        }else{
+            return str.charAt(0) + skipSubString(str.substring(1));
         }
     }
 }

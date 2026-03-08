@@ -18,10 +18,14 @@ public class mazeWithObstacles {
             System.out.println(p);
             return ;
         }
+        // now in case if we dont want to include specific cell in path then in that case we just have to
+        // stop the recursion
+
+        if(!maze[row][col]) return;
 
         // now we have to explore right and down and move forward
-        if(row < maze.length) printAvailablePaths(p + "D", maze ,row +1, col);
-        if(col < maze[0].length) printAvailablePaths(p + "R", maze ,row, col+1);
+        if(row < maze.length -1) printAvailablePaths(p + "D", maze ,row +1, col);
+        if(col < maze[0].length -1) printAvailablePaths(p + "R", maze ,row, col+1);
 
     }
 }

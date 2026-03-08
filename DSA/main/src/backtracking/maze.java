@@ -1,12 +1,15 @@
 package backtracking;
 
+import java.util.ArrayList;
+
 public class maze {
     public static void main(String[] args) {
         int [][] maze = new int[3][3];
 //        int ans = getAllPathsCount(maze.length-1, maze[0].length-1);
 //        System.out.println(ans);
 //        printAllPaths("",3,3);
-        printAllPathsUsingDiagonal("",3,3);
+        ArrayList<String> ans = getAllPathsUsingDiagonal("",3,3);
+        System.out.println(ans);
 
     }
 
@@ -52,5 +55,24 @@ public class maze {
         if(row > 1)printAllPathsUsingDiagonal(p +"D",row-1,col);
         if(col > 1) printAllPathsUsingDiagonal(p+"R",row,col-1);
         if(row > 1 && col>1) printAllPathsUsingDiagonal(p+"x", row-1, col-1);
+    }
+
+    // if want ans in a array list.
+
+    public static ArrayList<String> getAllPathsUsingDiagonal(String p , int row , int col){
+        // Here i have to go till the end
+        if(row == 1 && col ==1 ){
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+
+        }
+        //local storage
+        ArrayList<String> list = new ArrayList<>();
+        if(row > 1)list.addAll(getAllPathsUsingDiagonal(p +"D",row-1,col));
+        if(col > 1) list.addAll(getAllPathsUsingDiagonal(p+"R",row,col-1));
+        if(row > 1 && col>1) list.addAll(getAllPathsUsingDiagonal(p+"x", row-1, col-1));
+
+        return list;
     }
 }

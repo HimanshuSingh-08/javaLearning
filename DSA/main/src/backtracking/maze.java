@@ -5,11 +5,8 @@ public class maze {
         int [][] maze = new int[3][3];
 //        int ans = getAllPathsCount(maze.length-1, maze[0].length-1);
 //        System.out.println(ans);
-        printAllPaths("",3,3);
-    }
-
-    // we need helper function to trace through all.
-    public static void printPaths(int [][] maze){
+//        printAllPaths("",3,3);
+        printAllPathsUsingDiagonal("",3,3);
 
     }
 
@@ -41,4 +38,19 @@ public class maze {
         if(col > 1) printAllPaths(p+"R",row,col-1);
     }
 
+    // Till now we have used only right and down approach.
+    //now if consider the diagonal path two in that case we need a different approach.
+    // Lets create a function to print allpaths using diagonal path too.
+
+    public static void printAllPathsUsingDiagonal(String p ,int row , int col){
+        // Here i have to go till the end
+        if(row == 1 && col ==1 ){
+            System.out.println(p);
+            return;
+
+        }
+        if(row > 1)printAllPathsUsingDiagonal(p +"D",row-1,col);
+        if(col > 1) printAllPathsUsingDiagonal(p+"R",row,col-1);
+        if(row > 1 && col>1) printAllPathsUsingDiagonal(p+"x", row-1, col-1);
+    }
 }

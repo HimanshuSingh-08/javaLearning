@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BuildingComputer/BuildingComputer.iml" filepath="$PROJECT_DIR$/BuildingComputer/BuildingComputer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildingGroceryList/BuildingGroceryList.iml" filepath="$PROJECT_DIR$/BuildingGroceryList/BuildingGroceryList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DSA/DSA.iml" filepath="$PROJECT_DIR$/DSA/DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EcomApplicationExample/EcomApplicationExample.iml" filepath="$PROJECT_DIR$/EcomApplicationExample/EcomApplicationExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GenericClass/GenericClass.iml" filepath="$PROJECT_DIR$/GenericClass/GenericClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrderedTravel-Itinerary/OrderedTravel-Itinerary.iml" filepath="$PROJECT_DIR$/OrderedTravel-Itinerary/OrderedTravel-Itinerary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataStructures/dataStructures.iml" filepath="$PROJECT_DIR$/dataStructures/dataStructures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/javaLearning.iml" filepath="$PROJECT_DIR$/.idea/javaLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pratice/pratice.iml" filepath="$PROJECT_DIR$/pratice/pratice.iml" />
+    </modules>
+  </component>
+</project>

@@ -27,6 +27,13 @@ public class Box {
         this.length = l;
     }
 
+    //we can have a copy constructor to we want to initialise if we want.
+    public Box(Box old){
+        this.height = old.height;
+        this.width = old.width;
+        this.length = old.length;
+    }
+
     // to return the dimension i have to create the get and set function.
     public void printInfo(){
         System.out.println("Box is running !!");

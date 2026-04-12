@@ -1,11 +1,11 @@
 package OOPS;
 
 import OOPS.Inheritence.Box;
+import OOPS.Inheritence.FeatureBox;
 
 public class Main {
     public static void main(String[] args) {
-        //Lets create box`s and check.
-        Box cube = new Box();
-        System.out.println(cube.height + " " + cube.width +" " + cube.length);
+        FeatureBox cube2 = new FeatureBox();
+        System.out.println(cube2.weight + " " + cube2.length);
     }
 }

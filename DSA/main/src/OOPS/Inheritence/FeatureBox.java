@@ -17,3 +17,6 @@ public class FeatureBox extends Box{
         this.weight = weight;
     }
 }
+
+// Important thing to remember : We can not have object of child using parent class as thats is not possbile
+// we can intilise an child classes object using barent class datatype but vice versea is not possible

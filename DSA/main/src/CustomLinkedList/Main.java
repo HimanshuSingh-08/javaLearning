@@ -11,5 +11,7 @@ public class Main {
         node.printList();
         node.addAtIndex(10,3);
         node.printList();
+        node.deleteAtIndex(3);
+        node.printList();
     }
 }

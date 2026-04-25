@@ -9,6 +9,7 @@ public class Main {
         node.printList();
         node.addAtFirst(9);
         node.printList();
-        System.out.println(node.size());
+        node.addAtIndex(10,3);
+        node.printList();
     }
 }

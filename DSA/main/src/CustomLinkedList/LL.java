@@ -45,11 +45,23 @@ public class LL {
         head = temp;
     }
 
+    //Function to add at any specific position
+    public void addAtIndex(int value,int index){
+        Node temp = new Node(value);
+        Node pointer = head;
+        int i = 1;
+        while(i!= (index-1)){
+            pointer = pointer.next;
+            i++;
+        }
+        //chain break and join the ends
+        temp.next = pointer.next;
+        pointer.next = temp;
+
+    }
     // Print list
     public void printList(){
-
         Node temp = head;
-
         while(temp != null){
             System.out.print(temp.value + " -> ");
             temp = temp.next;
@@ -62,6 +74,4 @@ public class LL {
     public int size(){
         return size;
     }
-
-    // the
 }

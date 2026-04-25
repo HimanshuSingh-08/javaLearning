@@ -22,5 +22,7 @@ public class Main {
         dl.printfrontToEnd();
         dl.addAtIndex(2,10);
         dl.printBackToFront();
+        dl.deleteAtIndex(2);
+        dl.printBackToFront();
     }
 }

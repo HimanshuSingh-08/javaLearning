@@ -60,6 +60,39 @@ public class DL {
         pointer.next = temp;
     }
 
+    // Function to delete any element at particular index
+    // Remember to delete any value we should store it before else it will create mess and corrupt output.
+    public void deleteAtIndex(int index){
+
+        if(index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
+
+        if(index == 0){
+            head = head.next;
+            if(head != null) head.prev = null;
+            size--;
+            return;
+        }
+
+        Node pointer = head;
+
+        for(int i = 0; i < index - 1; i++){
+            pointer = pointer.next;
+        }
+
+        Node toDelete = pointer.next;
+
+        pointer.next = toDelete.next;
+
+        if(toDelete.next != null){
+            toDelete.next.prev = pointer;
+        } else {
+            tail = pointer;
+        }
+
+        size--;
+    }
     //Function to print doubly linked list
     public void printfrontToEnd(){
         // we will point to head and move from front to end.

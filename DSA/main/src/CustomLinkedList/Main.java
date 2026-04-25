@@ -20,6 +20,7 @@ public class Main {
         dl.addAtLast(3);
         dl.addAtLast(4);
         dl.printfrontToEnd();
+        dl.addAtIndex(2,10);
         dl.printBackToFront();
     }
 }

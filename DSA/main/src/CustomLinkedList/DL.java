@@ -44,6 +44,21 @@ public class DL {
         }
         size++;
     }
+    // Lets have function to add at particular index
+    public void addAtIndex(int index, int value){
+        int i = 1;
+        Node pointer = head;
+        while(i != (index -1)){
+            pointer = pointer.next;
+            i++;
+        }
+        // now we have to add links for this new node
+        Node temp = new Node(value);
+        temp.next = pointer.next;
+        temp.prev = pointer;
+        pointer.next.prev = temp;
+        pointer.next = temp;
+    }
 
     //Function to print doubly linked list
     public void printfrontToEnd(){

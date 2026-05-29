@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: store
+
+  #Database information
+  datasource:
+    url: jdbc:postgresql://aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres
+    username: postgres.uqxmvabkolovaugpiayd
+    password: Hexstore@256
+
+  #ORM Configuration
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

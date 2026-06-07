@@ -1,7 +1,10 @@
 public class TestThread extends Thread{
     @Override
     public void run() {
-        System.out.println("Printing From thread");
+        //to make it visible lets do some task inside this thread
+        for (int i = 0; i<5; i++){
+            System.out.println("Printing From thread");
+        }
     }
 }
 /*

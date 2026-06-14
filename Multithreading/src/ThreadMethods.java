@@ -16,5 +16,17 @@ public class ThreadMethods extends Thread{
         // Create one thread
         ThreadMethods t1 = new ThreadMethods();
         t1.start();
+        try {
+            t1.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
+
+/*
+What we have covered till now.
+- Start()
+- run()
+- join()
+* */
